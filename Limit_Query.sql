@@ -1,0 +1,12 @@
+SET STATISTICS IO ON;
+SET STATISTICS TIME ON;
+
+SELECT Name, Color, ListPrice 
+FROM SalesLT.Product;
+
+
+SET STATISTICS IO ON;
+SET STATISTICS TIME ON;
+
+SELECT TOP 10 Name, Color, ListPrice 
+FROM SalesLT.Product;
