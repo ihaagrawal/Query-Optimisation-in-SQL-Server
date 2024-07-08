@@ -1,3 +1,4 @@
+-- Using a WHILE LOOP --
 SET STATISTICS TIME ON;
 
 DECLARE @Counter INT = 1;
@@ -19,6 +20,7 @@ BEGIN
 END
 
 
+-- Using BULK INSERT/UPDATE --
 SET STATISTICS TIME ON;
 
 INSERT INTO [SalesLT].[ProductDescription]
