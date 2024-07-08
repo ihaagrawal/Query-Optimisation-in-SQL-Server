@@ -4,6 +4,8 @@
 
 This repository contains examples and demonstrations of SQL query optimization techniques using the AdventureWorksLT database. Query optimization is crucial for improving database performance, reducing resource consumption, and enhancing overall application efficiency.
 
+### Open [Full Report](https://github.com/ihaagrawal/Query-Optimisation-in-SQL-Server/blob/main/Query_Optimisation_Full_Report.docx) to view the complete Report Document on the Project
+
 ## Contents
 
 - [Introduction](#introduction)
