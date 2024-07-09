@@ -40,31 +40,31 @@ The repository explores various techniques and best practices for optimizing SQL
 
 ### Indexing Strategies
 
-- Efficient use of indexes to improve query performance.
+- Efficiently use indexes to enhance query performance by indexing frequently used columns in WHERE clauses, JOIN conditions, and ORDER BY clauses. Create composite indexes for multi-column filtering and covering indexes to include all needed query columns, thus avoiding extra table reads. Regularly maintain indexes to ensure they remain effective, and choose index types (B-tree, hash, etc.) based on specific data and query patterns.
 
 ### IN vs. EXISTS
 
-- Comparison of `IN` and `EXISTS` for optimizing subquery performance.
+- Use IN for subqueries with smaller result sets and simpler conditions, as it checks if a value exists within a set of values. EXISTS is more efficient for larger result sets and correlated subqueries, as it returns true when the subquery finds a match and stops further processing. EXISTS is typically faster for complex queries due to this short-circuiting behavior.
 
 ### Loops vs. Bulk Insert/Update
 
-- Demonstrations on using bulk operations instead of iterative loops for faster data processing.
-
+- Avoid using iterative loops for large datasets as they process one row at a time, leading to high overhead and slow performance. Instead, use bulk operations to handle multiple rows in a single operation, significantly reducing context switching and transaction log usage. Bulk inserts and updates are faster and more efficient for data loading and batch processing.
+  
 ### Inner Joins vs. WHERE Clause
 
-- Performance comparison between using `INNER JOIN` and `WHERE` clause for joining tables.
-
+- Prefer INNER JOIN for joining tables because it is more readable and maintainable, explicitly showing the join condition. INNER JOINs are generally optimized better by query planners compared to implicit joins using the WHERE clause. The performance difference is usually minimal, but INNER JOIN offers better clarity and optimization potential.
+  
 ### Selection Techniques
 
-- Optimal selection of columns to reduce query overhead.
+- Select only necessary columns to reduce I/O and memory usage, avoiding SELECT * which retrieves all columns and increases overhead. Use column aliases to improve query readability and prevent naming conflicts. Ensure queries retrieve only unique and essential data to minimize data load and enhance performance.
 
 ### Avoid Using SELECT DISTINCT
 
-- Strategies to avoid using `SELECT DISTINCT` for improving query efficiency.
+- Minimize the use of SELECT DISTINCT to avoid the performance cost of deduplication. Ensure data integrity and uniqueness at the database design level through proper normalization and constraints. Use GROUP BY to aggregate data and achieve similar results. Proper indexing and subqueries or Common Table Expressions (CTEs) can help filter duplicates more efficiently.
 
 ### Using TOP instead of LIMIT
 
-- Optimizing query result limits using `TOP` instead of `LIMIT`.
+- In SQL Server, use TOP to limit the number of rows returned, integrating with server-specific optimizations. In MySQL and PostgreSQL, use LIMIT to achieve the same effect. Both are efficient for controlling result sets. Combine LIMIT or TOP with OFFSET for efficient pagination, retrieving specific subsets of results without excessive overhead.
 
 ## Usage
 
