@@ -79,10 +79,53 @@ To use this repository, follow these steps:
 
 Contributions are welcome! If you have suggestions for optimizing queries, additional examples, or improvements to existing examples, please follow these guidelines:
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/improvement`).
-3. Make your changes.
-4. Commit your changes (`git commit -am 'Add feature/improvement'`).
-5. Push to the branch (`git push origin feature/improvement`).
-6. Create a new Pull Request.
+Step-by-Step Guide
+------------------
 
+### 1\. Fork the Repository
+
+*   Go to the repository you want to contribute to on GitHub.
+    
+*   Click on the "Fork" button at the top right corner. This will create a copy of the repository under your GitHub account.
+    
+
+### 2\. Clone the Forked Repository
+
+*   Open your terminal or Git Bash.
+    
+*   git clone https://github.com/ihaagrawal/Query-Optimisation-in-SQL-Server
+    
+*   cd repository-name
+    
+
+### 3\. Create a New Branch
+
+*   git checkout -b feature/improvement
+    
+
+### 4\. Make Your Changes
+
+*   Make the necessary changes to the codebase or documentation as required.
+    
+
+### 5\. Commit Your Changes
+
+*   git add .
+    
+*   git commit -m 'Add feature/improvement'
+    
+
+### 6\. Push to the Branch
+
+*   git push origin feature/improvement
+    
+
+### 7\. Create a Pull Request
+
+*   Go to your forked repository on GitHub.
+    
+*   You will see a prompt to create a pull request for the branch you just pushed. Click on "Compare & pull request".
+    
+*   Add a title and description for your pull request, explaining what changes you made and why.
+    
+*   Click on "Create pull request".
